@@ -32,7 +32,9 @@ jobs:
           distribution: 'temurin'
 
       - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
+        uses: android-actions/setup-android@v4
+        with:
+          packages: 'platform-tools'
 
       # 关键修正：一次性安装所有必需组件，并接受许可证
       # 官方要求的组件：platform-tools, platforms;android-35, build-tools;35.0.0, ndk;26.3.11579264
